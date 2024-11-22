@@ -1,0 +1,73 @@
+.bg-top {
+    background: url(../img/Bg1.png) $dark no-repeat center;
+    padding-top: relative-padding(25%);
+    padding-bottom: relative-padding(20%);
+}
+
+.top {
+    display: grid;
+}
+
+@media (min-width:320px) {
+    .top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .top a{
+        display: none;
+    }
+    .top .logo-m{
+        display: block;
+    }
+    // .burger-m ul{
+
+    // }
+    .burger-m a{
+        display: block;
+    }
+}
+
+@media (min-width:970px) {
+    .top {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+    .top a{
+        display: block;
+    }
+    .top a.icon{
+        display: none;
+    }
+    .top a:nth-child(1)
+    {
+        justify-self: end;
+    }
+    .top .logo-m,.burger-m{
+        display: none;
+    }
+}
+@media (min-width:1170px) {
+    .top {
+        grid-template-columns: 4fr 4fr repeat(2, 2fr);
+    }
+    .top a.icon{
+        display: block;
+    }
+    .logo-m{
+        display: none;
+    }
+}
+
+
+
+.top a {
+    @include font($thin, 20px, $light);
+}
+
+.top a span {
+    font-family: $normal;
+}
+
+.top a.icon {
+    @include font($normal, 22px, $white);
+    text-transform: uppercase;
+}

@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0 15px;
+}
+
+@media (min-width:970px) {
+    .container {
+        width: 970px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+@media (min-width:1170px) {
+    .container {
+        width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+
+h1,
+h2,
+h4 {
+
+    @include font($bold, 32px, $medium);
+    text-transform: uppercase;
+    line-height: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    @include font($medium-f, 22px, $black);
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+a{
+    text-decoration: none;
+}
