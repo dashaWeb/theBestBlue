@@ -67,9 +67,7 @@
     .logo-m {
         display: none;
     }
-    .bg-menu{
-        background-color: $medium;
-    }
+    
     .menu {
         display: flex;
         justify-content: space-around;
@@ -112,7 +110,10 @@
     font-family: $normal;
 }
 
-.top a.icon {
+a.icon {
     @include font($normal, 22px, $white);
     text-transform: uppercase;
+}
+.bg-menu{
+    background-color: $medium;
 }
