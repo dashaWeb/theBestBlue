@@ -1,0 +1,80 @@
+.bg-banner {
+    background: -webkit-linear-gradient(left, rgba(230, 237, 245, 1) 0%, rgba(230, 237, 245, 1) 36%, rgba(248, 249, 249, 1) 63%, rgba(248, 249, 249, 1) 100%);
+    /* Chrome10+,Safari5.1+ */
+
+    .banner {
+        background: url(/assets/img/banner.png) no-repeat center center;
+        // background-size: cover;
+
+        .head-banner {
+            .logo {
+                padding: 35px 0px;
+                display: block;
+            }
+
+            .heading {
+                transform: translateX(-15px);
+                filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+
+                .d7 {
+                    width: 0;
+                    height: 0;
+                    border-top: 30px solid $light;
+                    border-right: 30px solid transparent;
+                }
+            }
+
+            h1 {
+                background-color: $light;
+                width: 50%;
+                padding: 20px 50px;
+
+            }
+
+            ul {
+                line-height: 1.833;
+                padding-left: 30px;
+                @include font($arial, 18px, $dark);
+
+                // font-weight: bold;
+                li {
+                    display: flex;
+                    align-items: center;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: $medium;
+                        border-radius: 50%;
+                        transform: translateX(-20px);
+                    }
+                }
+
+            }
+
+            h3 {
+                padding-left: 40px;
+            }
+
+            .buttons {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 40px;
+                width: 50%;
+                grid-column-gap: 30px;
+                grid-row-gap: 15px;
+
+                button {
+                    // padding: 5px;
+                    display: block;
+                    background: none;
+                    border:1px solid $medium;
+                    @include font($normal, 18px, $medium);
+                    line-height: 42px;
+                }
+            }
+        }
+    }
+}
