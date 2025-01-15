@@ -15,7 +15,7 @@
   width: 65px;
   height: 35px;
   cursor: pointer;
-  z-index: 2;
+  z-index:11;
 }
 
 /* добавляем "гамбургер" */
@@ -45,7 +45,7 @@
   display: block;
   position: fixed;
   visibility: hidden;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   right: -100%;
   width: 320px;
@@ -92,6 +92,7 @@
 #menu__toggle-m:checked~.menu__box-m {
   visibility: visible;
   right: 0;
+  z-index: 10;
 }
 
 .hamburger-menu-m {
