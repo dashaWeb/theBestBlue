@@ -1,3 +1,4 @@
+
 fun = (a) => {
-    return a;
+    return a
 }

@@ -1,0 +1,90 @@
+.bg-order-by-home {
+    background: $dark-blue url(/assets/img/Bg2.svg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid $dark-blue;
+
+    .first-order {
+
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+
+        article {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: $light;
+            padding-left: 20px;
+            padding-right: 10px;
+            margin-top: 20px;
+
+            button {
+                display: block;
+                width: 100%;
+                @include font($normal, 18px, $dark-blue);
+                text-transform: uppercase;
+                line-height: 36px;
+                border: none;
+                background: none;
+                text-align: right;
+                position: relative;
+
+
+                span:first-of-type {
+                    @include font($bold, 34px, $warning);
+                }
+
+                span:last-of-type {
+                    @include font($normal, 26px, $warning);
+                }
+
+                .d28 {
+                    height: 5px;
+                    width: 41px;
+                    position: absolute;
+                    transform-origin: top right;
+                    transform: rotate(-90deg);
+                }
+
+                .d28:before,
+                .d28:after {
+                    content: "";
+                    height: 100%;
+                    width: 50%;
+                    position: absolute;
+                    top: 0;
+                    background: $dark-blue;
+                }
+
+                .d28:before {
+                    left: 0;
+                    transform: skew(0deg, 30deg);
+                }
+
+                .d28:after {
+                    right: 0;
+                    transform: skew(0deg, -30deg);
+                }
+            }
+
+
+        }
+
+        .d7 {
+            width: 0;
+            height: 0;
+            border-top: 20px solid $light;
+            border-right: 20px solid transparent;
+        }
+    }
+
+    .select-block
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 95px;
+        grid-row-gap: 25px;
+        
+        
+        article{
+            position: relative;
+        }
+    }
+}

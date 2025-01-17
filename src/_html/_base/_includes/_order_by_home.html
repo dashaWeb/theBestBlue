@@ -1,0 +1,128 @@
+<div class="container-fluid bg-order-by-home">
+    <section class="container">
+        <div class="first-order">
+            <article>
+                <h2>Get a price quote</h2>
+                <button>
+                    <div class="d28"></div>
+                    <span>15</span>
+                    <span>% off</span>
+                    your first order
+                </button>
+            </article>
+            <div class="d7"></div>
+        </div>
+    </section>
+    <section class="container select-block">
+        <article>
+            <p>TITLE OF YOUR PAPER</p>
+            <div class="dropdown" id='dropdown'>
+                <div class="dropdown__label">
+
+                </div>
+                <ul class="dropdown__menu">
+                    
+                </ul>
+            </div>
+        </article>
+        <article>
+            <p>TITLE OF YOUR PAPER</p>
+            <div class="dropdown" id='dropdown'>
+                <div class="dropdown__label">
+
+                </div>
+                <ul class="dropdown__menu">
+
+                </ul>
+            </div>
+        </article>
+        <article>
+            <p>TITLE OF YOUR PAPER</p>
+            <div class="dropdown" id='dropdown'>
+                <div class="dropdown__label">
+
+                </div>
+                <ul class="dropdown__menu">
+
+                </ul>
+            </div>
+        </article>
+        <article>
+            <p>TITLE OF YOUR PAPER</p>
+            <div class="dropdown" id='dropdown'>
+                <div class="dropdown__label">
+
+                </div>
+                <ul class="dropdown__menu">
+
+                </ul>
+            </div>
+        </article>
+        <article>
+            <p>TITLE OF YOUR PAPER</p>
+            <div class="dropdown" id='dropdown'>
+                <div class="dropdown__label">
+
+                </div>
+                <ul class="dropdown__menu">
+
+                </ul>
+            </div>
+        </article>
+        <article>
+
+        </article>
+    </section>
+</div>
+
+<script>
+
+    class Dropdown {
+        constructor(selector, options) {
+            this.el = document.querySelector(selector);
+            this.items = options.items;
+            this.el.querySelector('.dropdown__label').textContent = this.items[0].label;
+
+            this.el.addEventListener('click', event => {
+                if (event.target.classList.contains('dropdown__label')) {
+                    if (this.el.classList.contains('open')) {
+                        this.close();
+                    }
+                    else {
+                        this.open();
+                    }
+                }
+                else if (event.target.tagName.toLowerCase() === 'li') {
+                    this.select(event.target.dataset.id)
+                }
+            })
+            const itemsHTML = this.items.map(i => {
+                return `<li data-id="${i.id}">${i.label}</li>`
+            }).join(' ')
+
+            this.el.querySelector('.dropdown__menu').insertAdjacentHTML('afterbegin', itemsHTML)
+        }
+        select(id) {
+            const item = this.items.find(i => i.id === id);
+            this.el.querySelector('.dropdown__label').textContent = item.label;
+            this.close();
+
+        }
+        open() {
+            this.el.classList.add('open')
+        }
+
+        close() {
+            this.el.classList.remove('open')
+        }
+    }
+
+    const dropdown = new Dropdown('#dropdown', {
+        items: [
+            { label: 'Київ', id: 'kv' },
+            { label: 'Рівне', id: 'rv' },
+            { label: 'Одеса', id: 'od' },
+            { label: 'Херсон', id: 'hr' }
+        ]
+    })
+</script>
