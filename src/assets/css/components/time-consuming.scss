@@ -1,18 +1,31 @@
 .time-consuming {
-    p{
-        @include font($arial,18px,$black)
+    border-top: solid $body-bg 1px;
+    background: url(/assets/img/Bg3.svg) no-repeat center;
+    background-size: 100%;
+    background-position-y: -250px;
+
+    p {
+        @include font($arial, 18px, $black);
+        text-align: justify;
+
     }
-    .first-order{
+
+    h4 {
+        height: 60px;
+    }
+
+    .first-order {
 
         filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
         margin-bottom: 15px;
+
         article {
             background-color: $light;
             padding: 10px;
             text-align: center;
             margin-top: 20px;
         }
-        
+
         .d7 {
             width: 0;
             height: 0;
@@ -22,32 +35,115 @@
     }
 
     .option-block {
-       margin-top: 50px;
+        margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 20px;
+        text-align: center;
+
         div {
-            h4{
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            h4 {
                 text-align: center;
                 margin: 10px 0;
             }
+
+            p {}
+
             article {
                 background: none;
+                padding: 10px;
+                height: 100%;
             }
+
             .d7 {
-                border: none;
+                width: 0;
+                height: 0;
+                border-top: 20px solid transparent;
+                border-right: 20px solid transparent;
                 filter: none;
             }
-            i{
+            button{
+                align-self: flex-end;
+            }
+            i {
                 display: block;
                 margin: 0 auto;
                 width: 110px;
                 height: 110px;
                 border-radius: 50%;
             }
-            &:nth-child(1) i
-            {
-                background-color: red;
+
+
+            &:nth-child(1) i {
+                background: url(/assets/img/Element1.svg);
+                transition: 1s;
             }
+
+            &:nth-child(1):hover {
+                i {
+
+                    background: url(/assets/img/Element1_dark.svg);
+                }
+            }
+
+            &:nth-child(2) i {
+                background: url(/assets/img/Element2.svg);
+                transition: 1s;
+            }
+
+            &:nth-child(2):hover {
+                i {
+                    background: url(/assets/img/Element2_dark.svg);
+
+                }
+            }
+
+            &:nth-child(3) i {
+                background: url(/assets/img/Element3.svg);
+                transition: 1s;
+            }
+
+            &:nth-child(3):hover {
+                i {
+
+                    background: url(/assets/img/Element3_dark.svg);
+                }
+            }
+
+            &:nth-child(4) i {
+                background: url(/assets/img/Element4.svg);
+                transition: 1s;
+            }
+
+            &:nth-child(4):hover {
+                i {
+                    background: url(/assets/img/Element4_dark.svg);
+                }
+            }
+
+            &:hover {
+                filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+
+                .d7 {
+                    border-top: 20px solid $white;
+                }
+
+                article {
+
+                    background-color: $white;
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width:1170px) {
+    .time-consuming {
+        .option-block {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }
