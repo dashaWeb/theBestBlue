@@ -14,7 +14,20 @@
             If you are thinking you can't write your essay well enough and you need professional assistance, then you
             are thinking along the right lines. When your tutors read the essay we provide, they will love it. They will
             think you wrote it and they will admire the way it is written, so you are likely to get an A grade.</p>
+        <div class="first-order ">
+            <article>
+                <h2>Here’s what you can get using our custom writing service</h2>
+            </article>
+            <div class="d7"></div>
+        </div>
+
         <section class="option-block">
+            <ul class="icon-mob">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
             <div>
                 <article>
                     <i></i>
@@ -23,7 +36,7 @@
                         providers. And, guess what? This is no big surprise. There are many students who aren't very
                         skilled at writing and cannot produce good-quality, accurately referenced and perfectly edited
                         custom papers on their own.</p>
-                    <button>Read more &raquo;</button>
+                    <p><button>Read more &raquo;</button></p>
                 </article>
                 <div class="d7"></div>
             </div>
@@ -37,7 +50,8 @@
                         aspect of their lives. If you buy your papers from us online, you will be able to manage your
                         busy schedule better and devote more time to friends and family or use it for other more
                         pressing matters, whether they are personal or business-related.</p>
-                    <button>Read more &raquo;</button>
+
+                    <p> <button>Read more &raquo;</button></p>
                 </article>
                 <div class="d7"></div>
             </div>
@@ -56,7 +70,7 @@
                         <li> Papers at an affordable price: We offer the best value with prices that are quite cheap
                         </li>
                     </ul>
-                    <button>Read more &raquo;</button>
+                    <p><button>Read more &raquo;</button></p>
                 </article>
                 <div class="d7"></div>
             </div>
@@ -75,10 +89,29 @@
                         <li> Win the admiration of your tutors</li>
                         <li> Enhance your academic record to a remarkable extent</li>
                     </ul>
-                    <button>Read more &raquo;</button>
+                    <p> <button>Read more &raquo;</button></p>
                 </article>
                 <div class="d7"></div>
             </div>
         </section>
+
     </section>
 </div>
+
+<script>
+    let li = document.querySelectorAll(".icon-mob li");
+    let div = document.querySelectorAll(".option-block>div");
+
+    div[0].classList.add("show")
+    for (let i = 0; i < li.length; i++) {
+        li[i].addEventListener('click', () => {
+            for (let j = 0; j < div.length; j++) {
+                if (div[j].classList.contains("show"))
+                    div[j].classList.remove("show");
+
+            }
+            div[i].classList.add("show")
+        })
+    };
+
+</script>
