@@ -1,0 +1,108 @@
+.bg-order-paper {
+    background: $medium url(/assets/img/Bg2.svg) no-repeat center;
+    background-position-y: -150px;
+    background-size: 100%;
+    border-top: 1px solid $medium;
+    border-bottom: 1px solid $medium;
+
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        header {
+            h4 {
+                text-transform: none;
+                text-align: center;
+            }
+        }
+
+        main {
+            display: grid;
+            grid-column-gap: 30px;
+            article{
+                margin-top: 40px;
+            }
+            span{
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include font($bold,25px, $medium);
+                margin-bottom: 15px;
+            }
+            p {
+                @include font($arial, 22px, $white);
+                padding-bottom: 10px;
+                border-bottom: 2px solid $white;
+            }
+        }
+        .first-order {
+
+            h2{
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media (min-width:320px) {
+    .bg-order-paper {
+        .container {
+            header {
+                h4 {
+                    @include font($arial, 20px, $white);
+                }
+            }
+            main {
+                grid-template-columns: repeat(1, 1fr);
+                article{
+                    position: relative;
+                }
+                span{
+                    position: absolute;
+                    top: -5px;
+                }
+                p{
+                    text-indent: 35px;
+                }
+            }
+        }
+    }
+
+}
+@media (min-width:970px) {
+    .bg-order-paper {
+        .container {
+            header {
+                h4 {
+                    @include font($arial, 24px, $white);
+                }
+            }
+            main {
+                grid-template-columns: repeat(3, 1fr);
+                article{
+                    position: relative;
+                }
+                span{
+                    position:relative;
+                }
+                p{
+                    text-indent: 0px;
+                }
+            }
+        }
+    }
+
+}
+@media (min-width:1170px) {
+    .bg-order-paper {
+        .container {
+            main {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}

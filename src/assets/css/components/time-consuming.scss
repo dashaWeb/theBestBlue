@@ -3,6 +3,7 @@
     background: url(/assets/img/Bg3.svg) no-repeat center;
     background-size: 100%;
     background-position-y: -250px;
+    padding-bottom: 50px;
 
     p {
         @include font($arial, 18px, $black);
@@ -14,25 +15,7 @@
         height: 60px;
     }
 
-    .first-order {
-
-        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
-        margin-bottom: 15px;
-
-        article {
-            background-color: $light;
-            padding: 10px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .d7 {
-            width: 0;
-            height: 0;
-            border-top: 20px solid $light;
-            border-right: 20px solid transparent;
-        }
-    }
+    
 
     .option-block {
         margin-top: 50px;
