@@ -1,0 +1,70 @@
+.how-it-work {
+    background: url(/assets/img/Bg3.svg) no-repeat;
+    background-position-y: 310px;
+    background-size: cover;
+
+    .blocks {
+        display: grid;
+        grid-column-gap: 20px;
+        grid-template-columns: 2fr 1.5fr;
+
+        section {
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            padding: 0px 45px;
+
+            span {
+                display: block;
+                width: 120px;
+                height: 120px;
+                background: url(/assets/img/Works1.svg);
+                margin: 0 auto;
+                margin-bottom: 40px;
+            }
+
+            p {
+                @include font($arial, 18px, $black);
+                text-align: justify;
+            }
+        }
+
+        ol {
+            order: -1;
+            list-style-type: none;
+            counter-reset: my-numbers 0;
+
+            li {
+                position: relative;
+                width: 100%;
+                padding-left: 40px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid $light;
+
+                &::before {
+                    @include font($spicy, 60px, $light);
+                    content: counter(my-numbers);
+                    margin-right: 10px;
+                    /* выводит число */
+                    counter-increment: my-numbers;
+                    /* увеличивает значение счетчика */
+                }
+
+                &:after {
+                    position: absolute;
+                    right: -50px;
+                    content:'';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-top: 41.5px solid transparent;
+                    border-left: 50px solid $medium;
+                    border-bottom: 41.5px solid transparent;
+                }
+
+            }
+        }
+
+    }
+}
